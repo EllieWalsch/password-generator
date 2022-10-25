@@ -92,6 +92,12 @@ const upperCasedCharacters = [
 
 function generatePassword() {
   // TODO: Write your code here
+
+  // Asks user for character length
+  const passwordLength = prompt("Please choose a password length between 8 and 128 characters");
+  console.log("Your password will be " + passwordLength + " characters long.");
+
+   
 }
 
 // Write password to the #password input
