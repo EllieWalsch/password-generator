@@ -102,9 +102,14 @@ function generatePassword() {
     console.log("Try again.")
   }
 
-  if(passwordLength > 128) {
+  else if(passwordLength > 128) {
     alert("Please choose a shorter password.");
     console.log("Try again.")
+  }
+
+  // Asks user for lowercase
+  else {
+    confirm("Include lowercase characters?");
   }
    
 }
