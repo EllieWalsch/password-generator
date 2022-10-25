@@ -97,6 +97,15 @@ function generatePassword() {
   const passwordLength = prompt("Please choose a password length between 8 and 128 characters");
   console.log("Your password will be " + passwordLength + " characters long.");
 
+  if(passwordLength < 8) {
+    alert("Please choose a longer password.");
+    console.log("Try again.")
+  }
+
+  if(passwordLength > 128) {
+    alert("Please choose a shorter password.");
+    console.log("Try again.")
+  }
    
 }
 
