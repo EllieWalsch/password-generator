@@ -111,6 +111,7 @@ function generatePassword() {
   else {
     confirm("Include lowercase characters?");
     confirm("Include uppercase characters?");
+    confirm("Include numbers?");
   }
    
 }
