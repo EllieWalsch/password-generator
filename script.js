@@ -92,7 +92,10 @@ const upperCasedCharacters = [
 
 function generatePassword() {
   const passwordLength = getPasswordLength ();
+  const password = [];
 
+
+  // If passwordLength is false, return nothing
   if (!passwordLength) {
     return password;
   }
