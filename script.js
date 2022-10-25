@@ -107,9 +107,10 @@ function generatePassword() {
     console.log("Try again.")
   }
 
-  // Asks user for lowercase
+  // Asks user for character types
   else {
     confirm("Include lowercase characters?");
+    confirm("Include uppercase characters?");
   }
    
 }
