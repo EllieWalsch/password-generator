@@ -112,6 +112,7 @@ function generatePassword() {
     confirm("Include lowercase characters?");
     confirm("Include uppercase characters?");
     confirm("Include numbers?");
+    confirm("Include special characters?");
   }
    
 }
