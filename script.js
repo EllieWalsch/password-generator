@@ -91,31 +91,58 @@ const upperCasedCharacters = [
 ];
 
 function generatePassword() {
+  const passwordLength = getPasswordLength ();
+
+  if (!passwordLength) {
+    return password;
+  }
   // TODO: Write your code here
 
   // Asks user for character length
-  const passwordLength = prompt("Please choose a password length between 8 and 128 characters");
-  console.log("Your password will be " + passwordLength + " characters long.");
 
-  if(passwordLength < 8) {
-    alert("Please choose a longer password.");
-    console.log("Try again.")
-  }
+  // const passwordLength = prompt("Please choose a password length between 8 and 128 characters");
+  // console.log("Your password will be " + passwordLength + " characters long.");
 
-  else if(passwordLength > 128) {
-    alert("Please choose a shorter password.");
-    console.log("Try again.")
-  }
+  // if(passwordLength < 8) {
+  //   alert("Please choose a longer password.");
+  //   console.log("Try again.")
+  // }
+
+  // else if(passwordLength > 128) {
+  //   alert("Please choose a shorter password.");
+  //   console.log("Try again.")
+  // }
 
   // Asks user for character types
-  else {
-    confirm("Include lowercase characters?");
-    confirm("Include uppercase characters?");
-    confirm("Include numbers?");
-    confirm("Include special characters?");
-  }
+  // else {
+  //   confirm("Include lowercase characters?");
+  //   confirm("Include uppercase characters?");
+  //   confirm("Include numbers?");
+  //   confirm("Include special characters?");
+  // }
    
 }
+
+// Ask user for password length
+function getPasswordLength () {
+  const passwordLength = prompt("Please choose a password length between 8 and 128 characters.");
+
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    return passwordLength;
+  }
+
+  else if (passwordLength < 8 ) {
+    alert("Please choose a longer password.");
+    return false;
+  }
+
+  else if (passwordLength > 128 ) {
+    alert("Please choose a shorter password.");
+    return false;
+  }
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
