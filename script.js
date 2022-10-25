@@ -99,22 +99,6 @@ function generatePassword() {
   if (!passwordLength) {
     return password;
   }
-  // TODO: Write your code here
-
-  // Asks user for character length
-
-  // const passwordLength = prompt("Please choose a password length between 8 and 128 characters");
-  // console.log("Your password will be " + passwordLength + " characters long.");
-
-  // if(passwordLength < 8) {
-  //   alert("Please choose a longer password.");
-  //   console.log("Try again.")
-  // }
-
-  // else if(passwordLength > 128) {
-  //   alert("Please choose a shorter password.");
-  //   console.log("Try again.")
-  // }
 
   // Asks user for character types
   // else {
@@ -126,7 +110,7 @@ function generatePassword() {
    
 }
 
-// Ask user for password length
+// Asks user for password length
 function getPasswordLength () {
   const passwordLength = prompt("Please choose a password length between 8 and 128 characters.");
 
