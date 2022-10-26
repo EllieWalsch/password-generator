@@ -123,7 +123,7 @@ function generatePassword() {
   if (specialChar) {
     availableChar.push(specialCharacters)
   }
-  console.log(availableChar)
+ 
 }
 
 
