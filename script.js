@@ -123,17 +123,25 @@ function generatePassword() {
   if (specialChar) {
     availableChar.push(specialCharacters)
   }
+
  
-  
 }
 
-// Get random index from our available character list
+// Get a random list from user selections
+function getRandomArray() {
+  let randomList = availableChar[getRandomInt(0, availableChar.length)]
+  return randomList
+}
+
+// Get a random integer
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(0);
-  max = Math.floor(availableChar.length);
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
 
 
 // Ask user for password length
