@@ -90,24 +90,23 @@ const upperCasedCharacters = [
   "Z",
 ];
 
+// Generates a random password
 function generatePassword() {
   const passwordLength = getPasswordLength ();
+
   const password = [];
 
-
+  
   // If passwordLength is false, return nothing
   if (!passwordLength) {
     return password;
   }
 
   // Asks user for character types
-  // else {
-  //   confirm("Include lowercase characters?");
-  //   confirm("Include uppercase characters?");
-  //   confirm("Include numbers?");
-  //   confirm("Include special characters?");
-  // }
-   
+  const lowercase = confirm ("Click ok to include lowercase characters.")
+  const uppercase = confirm ("Click ok to include uppercase characters.")
+  const numbers = confirm ("Click ok to include numbers.")
+  const specialChar = confirm ("Click ok to include special characters.")
 }
 
 // Asks user for password length
