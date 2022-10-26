@@ -124,10 +124,16 @@ function generatePassword() {
     availableChar.push(specialCharacters)
   }
  
+  
 }
 
-
-
+// Get random index from our available character list
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(0);
+  max = Math.floor(availableChar.length);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
 // Ask user for password length
@@ -148,7 +154,6 @@ function getPasswordLength () {
     return false;
   }
 }
-
 
 
 // Write password to the #password input
