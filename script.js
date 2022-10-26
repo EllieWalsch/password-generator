@@ -93,6 +93,8 @@ const upperCasedCharacters = [
 // Generates a random password
 function generatePassword() {
   const passwordLength = getPasswordLength ();
+  
+  const availableChar = [];
 
   const password = [];
 
@@ -102,14 +104,33 @@ function generatePassword() {
     return password;
   }
 
-  // Asks user for character types
-  const lowercase = confirm ("Click ok to include lowercase characters.")
-  const uppercase = confirm ("Click ok to include uppercase characters.")
-  const numbers = confirm ("Click ok to include numbers.")
-  const specialChar = confirm ("Click ok to include special characters.")
+  // Ask user for character types
+  const lowercase = confirm ("Click ok to include lowercase characters.");
+  const uppercase = confirm ("Click ok to include uppercase characters.");
+  const numbers = confirm ("Click ok to include numbers.");
+  const specialChar = confirm ("Click ok to include special characters.");
+
+  // Add selected characters to available characters for password generator
+  if (lowercase) {
+    availableChar.push(lowerCasedCharacters)
+  }
+  if (uppercase) {
+    availableChar.push(upperCasedCharacters)
+  }
+  if (numbers) {
+    availableChar.push(numericCharacters)
+  }
+  if (specialChar) {
+    availableChar.push(specialCharacters)
+  }
+  console.log(availableChar)
 }
 
-// Asks user for password length
+
+
+
+
+// Ask user for password length
 function getPasswordLength () {
   const passwordLength = prompt("Please choose a password length between 8 and 128 characters.");
 
