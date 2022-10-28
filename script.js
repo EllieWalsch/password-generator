@@ -115,7 +115,7 @@ function generatePassword() {
   
   // If passwordLength is false, return nothing
   if (!passwordLength) {
-    return newPassword;
+    return ("Try again!");
   }
 
   // Ask user for character types
@@ -138,6 +138,12 @@ function generatePassword() {
     availableChar.push(specialCharacters)
   }
 
+  // If available characters is false, return nothing
+  if (!availableChar.length) {
+    alert ("Please choose at least one character type.");
+    return ("Try again!");
+  }
+
   // Choose a random array from available characters
   // Choose a random character from that array
   // Loop until password length is satisfied
@@ -148,8 +154,6 @@ function generatePassword() {
   }
 
   return newPassword;
-  
-
 }
 
 
