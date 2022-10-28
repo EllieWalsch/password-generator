@@ -99,7 +99,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 // Use the random integer function to randomize choices
-// list.length - 1 ensures that all items are accounted for (indexes start at 0)
+// list.length - 1 ensures that all items are accounted for (indexes start at 0) https://blog.kevinchisholm.com/javascript/javascript-array-length-always-one-higher/#:~:text=The%20JavaScript%20array%20length%20property,a%20value%20of%20%E2%80%9Cfour%E2%80%9D.
 function getRandom(list) {
   return list[getRandomIntInclusive(0, list.length - 1)]
 }
@@ -138,8 +138,14 @@ function generatePassword() {
     availableChar.push(specialCharacters)
   }
 
-  // TODO: use the getRandom function to loop user choices for the password length
-  // TODO: create a for loop ^^
+  // Choose a random array from available characters
+  // Choose a random character from that array
+  // Loop until password length is satisfied
+  for (var i = 0; i < passwordLength; i++) {
+    let randomArray = getRandom(availableChar);
+    let randomCharacters = getRandom(randomArray);
+    console.log(randomCharacters);
+  }
 
 }
 
@@ -148,7 +154,7 @@ function generatePassword() {
 function getPasswordLength () {
   const passwordLength = prompt("Please choose a password length between 8 and 128 characters.");
 
-  // *********Returns user input and transforms string into number
+  // Returns user input and transforms string into number
   if (passwordLength >= 8 && passwordLength <= 128) {
     return parseInt(passwordLength);
   }
