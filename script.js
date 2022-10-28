@@ -110,12 +110,12 @@ function generatePassword() {
   
   const availableChar = [];
 
-  const password = [];
+  let newPassword = [];
 
   
   // If passwordLength is false, return nothing
   if (!passwordLength) {
-    return password;
+    return newPassword;
   }
 
   // Ask user for character types
@@ -144,8 +144,11 @@ function generatePassword() {
   for (var i = 0; i < passwordLength; i++) {
     let randomArray = getRandom(availableChar);
     let randomCharacters = getRandom(randomArray);
-    console.log(randomCharacters);
+    newPassword += randomCharacters;
   }
+
+  return newPassword;
+  
 
 }
 
