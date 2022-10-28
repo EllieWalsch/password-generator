@@ -100,8 +100,8 @@ function getRandomIntInclusive(min, max) {
 
 // Use the random integer function to randomize choices
 // list.length - 1 ensures that all items are accounted for (indexes start at 0) https://blog.kevinchisholm.com/javascript/javascript-array-length-always-one-higher/#:~:text=The%20JavaScript%20array%20length%20property,a%20value%20of%20%E2%80%9Cfour%E2%80%9D.
-function getRandom(list) {
-  return list[getRandomIntInclusive(0, list.length - 1)]
+function getRandom(arr) {
+  return arr[getRandomIntInclusive(0, arr.length - 1)]
 }
 
 // Generates a random password
