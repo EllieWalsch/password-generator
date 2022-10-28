@@ -14,7 +14,7 @@ Click Generate Password and answer each prompt to generate a random password. Yo
 
 If no options are picked, an error message will display "try again!"
 
-![Password generator webpage](./assets/03-javascript-homework-demo.png)
+![Password generator webpage](assets/03-javascript-homework-demo.png)
 
 Click here to visit the webpage! [https://elliewalsch.github.io/password-generator/](https://elliewalsch.github.io/password-generator/)
 
