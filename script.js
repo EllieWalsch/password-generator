@@ -91,10 +91,17 @@ const upperCasedCharacters = [
 ];
 
 // Gets random integer between a min and max
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Use the random integer function to randomize choices
+// list.length - 1 ensures that all items are accounted for (indexes start at 0)
+function getRandom(list) {
+  return list[getRandomIntInclusive(0, list.length - 1)]
 }
 
 // Generates a random password
@@ -131,7 +138,9 @@ function generatePassword() {
     availableChar.push(specialCharacters)
   }
 
- 
+  // TODO: use the getRandom function to loop user choices for the password length
+  // TODO: create a for loop ^^
+
 }
 
 
@@ -139,6 +148,7 @@ function generatePassword() {
 function getPasswordLength () {
   const passwordLength = prompt("Please choose a password length between 8 and 128 characters.");
 
+  // *********Returns user input and transforms string into number
   if (passwordLength >= 8 && passwordLength <= 128) {
     return parseInt(passwordLength);
   }
